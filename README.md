@@ -7,7 +7,7 @@ Controle des **versions**:
 <tr>
     <td>Version</td><td>Auteur</td><td>Description</td>
 </tr><tr>
-    <td>1.0</td><td>francis.forget@umontreal.ca</td><td>Installation vanille<td></td>
+    <td>1.0</td><td>francis.forget@umontreal.ca</td><td>Installation vanille
 </tr>
 </table>
 
