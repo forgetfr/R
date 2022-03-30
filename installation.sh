@@ -11,7 +11,7 @@ wget https://cran.r-project.org/src/base/R-4/R-${VERSION}.tar.gz
 mkdir tar -zxf R-${VERSION}.tar.gz && cd R-${VERSION}
 
 mkdir ${PATH_TO_INSTALL}
-./configure --prefix=${PATH_TO_INSTALL} --shlibs=enable
+./configure --prefix=${PATH_TO_INSTALL} 
 make 
 make install
 

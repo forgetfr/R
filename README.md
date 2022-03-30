@@ -11,11 +11,14 @@ Controle des **versions**:
 </tr>
 </table>
 
+
 Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 
-Dependances requises supplementaires d'une installation RH8 vanille :
-1. `dnf install gcc-gfortran`
-2. Bon, David me decoit, depuis quelques semaines, satellite ne rend plus disponible, les packages...
+Dependances requises supplementaires a inserer dans le playbook :
+
+`gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel`
 
 
-and so on. 
+Pour l'installation, lire le script `installation.sh`
+
+
