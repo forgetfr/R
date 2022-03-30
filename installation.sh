@@ -6,7 +6,7 @@ PATH_TO_INSTALL="/usr/local/R${VERSION}"
 PATH_TO_LINK="/usr/local/R"
 
 # Creation du repertoire de compilation
-WORKINGDIR=`mktemp -p`
+WORKINGDIR=`mktemp -p /sens/sens_data_test/temps`
 cd $WORKINGDIR
 
 # Telechargement des artefacts directements du site officiel
