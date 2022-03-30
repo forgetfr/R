@@ -1,5 +1,5 @@
 
-# R version 4-1-3
+# R version 4.0.1
 
 Controle des **versions**:
 
@@ -15,7 +15,7 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 
 Dependances requises supplementaires d'une installation RH8 vanille :
 1. `dnf install gcc-gfortran`
-2. Bon, David me decoit, depuis quelques semaines, satellite ne rend plus disponible, les packages...
+2. 
 
 
 and so on. 
