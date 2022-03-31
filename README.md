@@ -17,8 +17,6 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 </tr>
 </table>
 
----
-
 ## Pre-requis dans le playbook:
 
 ### Dependances systeme pour la compilation
@@ -27,9 +25,7 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 ### Librairies system hdfr5 pour permettre de rouler des librairies R supplementaires
 `hdf5 hdf5-devel`
 
----
-
-## Contexte
+## REquis
 
 Repertoire d'installation: /usr/local/R/R-**${VERSION}**
 
