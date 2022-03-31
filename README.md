@@ -22,7 +22,7 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 ### Dependances systeme pour la compilation
 `gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel java-latest-openjdk`
 
-### Librairie hdfr5 pour les modules R supplementaires
+### Librairies system hdfr5 pour permettre de rouler des librairies R supplementaires
 `hdf5 hdf5-devel`
 
 ---
@@ -42,8 +42,9 @@ Pour l'installation, lire le script `installation.sh`
 Les etapes:
 1. Telecharger les sources;
 2. Compiler les sources;
-3. Configurer le repo ### ceci empeche de nous poser la question a chaque installer des modules
-4. Creer un script R qui contient l'ensemble des modules exiges et l'executer
+3. Configurer le repo ### ceci empeche de selectionner un  repo a chaque installation de modules
+4. Rouler le script R qui isntalle l'ensemble des librairies exiges et l'executer
+5. Preparer un modulefile pour simplifier l'acces a l'application R
 
 A noter:
 
