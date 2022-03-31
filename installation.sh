@@ -30,7 +30,7 @@ tar -zxf R-${VERSION}.tar.gz --directory $WORKING_BUILD
 ### Etape 2: Compiler les sources;
 ############################################################################ 
 # Basculons dans le repertoire de BUILD
-cd $WORKINGDIR/R-${VERSION}
+cd $WORKING_BUILD/R-${VERSION}
 
 # Creer le repertoire ou residera l'application
 mkdir -p ${PATH_TO_INSTALL}
