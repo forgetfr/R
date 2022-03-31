@@ -38,10 +38,7 @@ Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
 ---
 
 ## Installation
-
-Pour l'installation, lire le script `installation.sh`
-
-Les etapes:
+Les grandes etapes que l'on retrouve dans le script `installation.sh` :
 1. Telecharger les sources;
 2. Compiler les sources;
 3. Configurer le repo ### ceci empeche de selectionner un  repo a chaque installation de modules
