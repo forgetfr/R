@@ -18,10 +18,6 @@
 #
 #            Rscript ./installAllLibs.R
 #
-# NOTE: /tmp must be executalble for library installation to succceed.
-#
-#                    mount -o remount,exec /tmp
-#
 #
 
 # Install Rserve and bioc(xcms) separtly due to special

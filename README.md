@@ -14,6 +14,8 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
     <td>0.4</td><td>francis.forget@umontreal.ca</td><td>Ajouter une action au script "delete|install"</td>
 </tr><tr>
     <td>1.0</td><td>francis.forget@umontreal.ca</td><td>Ajouter les librairies R supplementaires demandees par le client</td>
+</tr><tr>
+    <td>1.1</td><td>francis.forget@umontreal.ca</td><td>Rediriger le stdout et stderr dans un fichier temporaire</td>
 </tr>
 </table>
 

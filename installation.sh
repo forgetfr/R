@@ -1,5 +1,7 @@
 #!/bin/bash
 
+exec &>> "/tmp/installR.outpout"
+
 # Variable a comfigurer selon la version de l'application
 VERSION="4.1.3"
 PATH_TO_INSTALL="/usr/local/R${VERSION}"
