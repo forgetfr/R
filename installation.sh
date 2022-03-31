@@ -1,6 +1,6 @@
 #!/bin/bash
 
-exec &>> "/tmp/installR.outpout"
+exec &>> "/tmp/installR.outpout.$$$$"
 umask 0022
 
 # Variable a comfigurer selon la version de l'application
