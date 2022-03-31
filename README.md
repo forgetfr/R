@@ -27,6 +27,7 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 
 ## Requis contextuel
 
+Environnement de deploiement: Sur le partage NFS en lien aux application.
 Repertoire d'installation: /usr/local/R/R-**${VERSION}**
 
 Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
