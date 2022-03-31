@@ -19,11 +19,11 @@ ACTION=$1
 ############################################################################ 
 ### Etape 1
 ############################################################################ 
-# Telechargement des artefacts directements du site officiel
+echo "# SENS ############ Telechargement des artefacts directements du site officiel"
 cd $LOCAL_ARTEFACT
 [[ ! -e "R-${VERSION}.tar.gz" ]] && wget https://cran.r-project.org/src/base/R-4/R-${VERSION}.tar.gz 
 
-# Decompresser les artefacts
+echo "# SENS ############ Decompresser les artefacts"
 tar -zxf R-${VERSION}.tar.gz --directory $WORKING_BUILD
 
 ############################################################################ 
@@ -35,7 +35,7 @@ cd $WORKING_BUILD/R-${VERSION}
 # Creer le repertoire ou residera l'application
 mkdir -p ${PATH_TO_INSTALL}
 
-# Compiler et installer
+echo "# SENS ############ Compiler et installer"
 ./configure --prefix=${PATH_TO_INSTALL} 
 make 
 make install
@@ -43,14 +43,14 @@ make install
 ############################################################################ 
 ### Etape 3
 ############################################################################ 
-#Configurer le repo a utiliser par R
+echo "# SENS ############ Configurer le repo a utiliser par R"
 cp Rprofile.site ${PATH_TO_INSTALL}/lib64/R/etc/Rprofile.site 
 chmod 0644 ${PATH_TO_INSTALL}/lib64/R/etc/Rprofile.site 
 
 ############################################################################ 
 ### Etape 4
 ############################################################################ 
-#Installer les librairies R supplementaires
+echo "# SENS ############ Installer les librairies R supplementaires"
 ${PATH_TO_INSTALL}/bin/Rscript ./installAllLibs.R
 
 ############################################################################ 
