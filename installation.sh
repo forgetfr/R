@@ -9,7 +9,7 @@ PATH_TO_INSTALL="/sens/apps_test/live/R/R-${VERSION}"
 PATH_TO_LINK="/usr/local/R"
 
 LOCAL_ARTEFACT="/sens/apps_test/downloads/"
-WORKING_BUILD=`mktemp -p /sens/apps_test/builds`
+WORKING_BUILD="/sens/apps_test/builds"
 
 # Action orientant le present script. Valeurs autorisees: "install|delete"
 ACTION=$1
