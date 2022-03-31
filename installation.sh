@@ -1,15 +1,15 @@
 #!/bin/bash
 
 exec &>> "/tmp/installR.outpout"
+umask 0022
 
 # Variable a comfigurer selon la version de l'application
 VERSION="4.1.3"
-PATH_TO_INSTALL="/usr/local/R${VERSION}"
+PATH_TO_INSTALL="/sens/apps_test/live/R/R-${VERSION}"
 PATH_TO_LINK="/usr/local/R"
 
-# Creation du repertoire de compilation
-WORKINGDIR=`mktemp -p /sens/sens_data_test/temp`
-cd $WORKINGDIR
+LOCAL_ARTEFACT="/sens/apps_test/downloads/"
+WORKING_BUILD=`mktemp -p /sens/apps_test/builds`
 
 # Action orientant le present script. Valeurs autorisees: "install|delete"
 ACTION=$1
@@ -20,14 +20,18 @@ ACTION=$1
 ### Etape 1
 ############################################################################ 
 # Telechargement des artefacts directements du site officiel
-wget https://cran.r-project.org/src/base/R-4/R-${VERSION}.tar.gz
+cd $LOCAL_ARTEFACT
+[[ ! -e "R-${VERSION}.tar.gz" ]] && wget https://cran.r-project.org/src/base/R-4/R-${VERSION}.tar.gz 
 
 # Decompresser les artefacts
-tar -zxf R-${VERSION}.tar.gz && cd R-${VERSION}
+tar -zxf R-${VERSION}.tar.gz --directory $WORKING_BUILD
 
 ############################################################################ 
 ### Etape 2: Compiler les sources;
 ############################################################################ 
+# Basculons dans le repertoire de BUILD
+cd $WORKINGDIR/R-${VERSION}
+
 # Creer le repertoire ou residera l'application
 mkdir ${PATH_TO_INSTALL}
 
