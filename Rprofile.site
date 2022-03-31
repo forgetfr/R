@@ -1,0 +1,5 @@
+local({
+  r <- getOption("repos")
+  r["CRAN"] <- "https://cran.utstat.utoronto.ca/"
+  options(repos = r)
+})
