@@ -18,6 +18,8 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 </table>
 
 ## Pre-requis a inserer dans le playbook:
+### Dependances systeme pour le playbook
+`git-core`
 
 ### Dependances systeme pour la compilation
 `gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel java-latest-openjdk`
