@@ -33,7 +33,7 @@ tar -zxf R-${VERSION}.tar.gz --directory $WORKING_BUILD
 cd $WORKINGDIR/R-${VERSION}
 
 # Creer le repertoire ou residera l'application
-mkdir ${PATH_TO_INSTALL}
+mkdir -p ${PATH_TO_INSTALL}
 
 # Compiler et installer
 ./configure --prefix=${PATH_TO_INSTALL} 
