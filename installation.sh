@@ -8,10 +8,12 @@ VERSION="4.1.3"
 PATH_TO_INSTALL="${1}/R/R-${VERSION}"   # Repertoire d'installation
 LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
 WORKING_BUILD="${3}"                    # Repertoire de compilation
-ACTION="$4"
+ACTION="$4"                             # Gestion du cycle de vie de l'application
 
 # Action orientant le present script. Valeurs autorisees: "install|delete"
-[[ "$ACTION" == "delete" ]] || rm -rf ${PATH_TO_INSTALL}
+[[ "$ACTION" == "delete" ]] && { rm -rf ${PATH_TO_INSTALL} ; exit 1; }
+
+# On ecrase pas une installation existante
 [[ -d ${PATH_TO_INSTALL} ]] && { echo "Repertoire d'installation existant" ; exit 1; }
 
 ############################################################################ 
