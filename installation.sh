@@ -5,19 +5,17 @@ umask 0022
 
 # Variable a comfigurer selon la version de l'application
 VERSION="4.1.3"
-PATH_TO_INSTALL="/sens/apps_test/live/R/R-${VERSION}"
-PATH_TO_LINK="/usr/local/R"
-
-LOCAL_ARTEFACT="/sens/apps_test/downloads/"
-WORKING_BUILD="/sens/apps_test/builds"
+PATH_TO_INSTALL="${1}/R/R-${VERSION}"   # Repertoire d'installation
+LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
+WORKING_BUILD="${3}"                    # Repertoire de compilation
+ACTION="$4"
 
 # Action orientant le present script. Valeurs autorisees: "install|delete"
-ACTION=$1
 [[ "$ACTION" == "delete" ]] || rm -rf ${PATH_TO_INSTALL}
 [[ -d ${PATH_TO_INSTALL} ]] && { echo "Repertoire d'installation existant" ; exit 1; }
 
 ############################################################################ 
-### Etape 1
+### Etape 1:  Telecharger les sources si necessaire dans le depot d'artefact;
 ############################################################################ 
 echo "# SENS ############ Telechargement des artefacts directements du site officiel"
 cd $LOCAL_ARTEFACT

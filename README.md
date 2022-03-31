@@ -11,11 +11,13 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 </tr><tr>
     <td>0.1</td><td>francis.forget@umontreal.ca</td><td>Installation vanille</td>
 </tr><tr>
-    <td>0.4</td><td>francis.forget@umontreal.ca</td><td>Ajouter une action au script "delete|install"</td>
+    <td>0.2</td><td>francis.forget@umontreal.ca</td><td>Ajouter une action au script "delete|install"</td>
 </tr><tr>
-    <td>1.0</td><td>francis.forget@umontreal.ca</td><td>Ajouter les librairies R supplementaires demandees par le client</td>
+    <td>0.4</td><td>francis.forget@umontreal.ca</td><td>Ajouter les librairies R supplementaires demandees par le client</td>
 </tr><tr>
-    <td>1.1</td><td>francis.forget@umontreal.ca</td><td>Rediriger le stdout et stderr dans un fichier temporaire</td>
+    <td>0.5</td><td>francis.forget@umontreal.ca</td><td>Rediriger le stdout et stderr dans un fichier temporaire</td>
+</tr><tr>
+    <td>1.0</td><td>francis.forget@umontreal.ca</td><td>Integration a l'environnement de deploiement</td>
 </tr>
 </table>
 
@@ -39,7 +41,7 @@ Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
 
 ## Installation
 Les grandes etapes que l'on retrouve dans le script `installation.sh` :
-1. Telecharger les sources;
+1. Telecharger les sources si necessaire;
 2. Compiler les sources;
 3. Configurer le repo R pour l'acces aux librairies R supplementaires 
 4. Rouler le script R qui isntalle l'ensemble des librairies exiges et l'executer
