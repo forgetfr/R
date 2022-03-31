@@ -24,7 +24,7 @@ wget https://cran.r-project.org/src/base/R-4/R-${VERSION}.tar.gz
 tar -zxf R-${VERSION}.tar.gz && cd R-${VERSION}
 
 ############################################################################ 
-### Etape 2
+### Etape 2: Compiler les sources;
 ############################################################################ 
 # Creer le repertoire ou residera l'application
 mkdir ${PATH_TO_INSTALL}
