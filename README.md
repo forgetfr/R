@@ -37,7 +37,7 @@ Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
 Les grandes etapes que l'on retrouve dans le script `installation.sh` :
 1. Telecharger les sources;
 2. Compiler les sources;
-3. Configurer le repo ### ceci empeche de selectionner un  repo a chaque installation de modules
+3. Configurer le repo R pour l'acces aux librairies R supplementaires 
 4. Rouler le script R qui isntalle l'ensemble des librairies exiges et l'executer
 5. Preparer un modulefile pour simplifier l'acces a l'application R
 
