@@ -25,7 +25,7 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 ### Librairies system hdfr5 pour permettre de rouler des librairies R supplementaires
 `hdf5 hdf5-devel`
 
-## Requis
+## Requis contextuel
 
 Repertoire d'installation: /usr/local/R/R-**${VERSION}**
 
