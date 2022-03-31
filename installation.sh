@@ -1,27 +1,36 @@
 #!/bin/bash
 
+# Version de l'application
+VERSION="4.1.3"
+
+############################################################################ 
+### DEBUT: NE PAS MODIFIER CETTE SECTION
+############################################################################ 
+
 exec &>> "/tmp/installR.outpout.$$$$"
 umask 0022
 
-# Variable a comfigurer selon la version de l'application
-VERSION="4.1.3"
 PATH_TO_INSTALL="${1}/R/R-${VERSION}"   # Repertoire d'installation
 LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
-WORKING_BUILD="${3}"                    # Repertoire de compilation
+WORKING_BUILD="${3}"                    # Repertoire de compilation 
+GIT_DIR=`dirname $0`                # Repertoire courant qui contiendra tous les fichiers de git.
 ACTION="$4"                             # Gestion du cycle de vie de l'application
 
-# Action orientant le present script. Valeurs autorisees: "install|delete"
-[[ "$ACTION" == "delete" ]] && { rm -rf ${PATH_TO_INSTALL} ; exit 1; }
-
-# On ecrase pas une installation existante
 [[ -d ${PATH_TO_INSTALL} ]] && { echo "Repertoire d'installation existant" ; exit 1; }
 
 ############################################################################ 
-### Etape 1:  Telecharger les sources si necessaire dans le depot d'artefact;
+### FIN: NE PAS MODIFIER CETTE SECTION
 ############################################################################ 
-echo "# SENS ############ Telechargement des artefacts directements du site officiel"
+
+############################################################################ 
+### Etape 1:  Telecharger les sources si necessaire dans le depot d'artefact
+############################################################################ 
+
 cd $LOCAL_ARTEFACT
-[[ ! -e "R-${VERSION}.tar.gz" ]] && wget https://cran.r-project.org/src/base/R-4/R-${VERSION}.tar.gz 
+[[ ! -e "R-${VERSION}.tar.gz" ]] && {
+    echo "# SENS ############ Telechargement des artefacts directements du site officiel";
+    wget https://cran.r-project.org/src/base/R-4/R-${VERSION}.tar.gz;
+}
 
 echo "# SENS ############ Decompresser les artefacts"
 tar -zxf R-${VERSION}.tar.gz --directory $WORKING_BUILD
@@ -44,14 +53,14 @@ make install
 ### Etape 3
 ############################################################################ 
 echo "# SENS ############ Configurer le repo a utiliser par R"
-cp Rprofile.site ${PATH_TO_INSTALL}/lib64/R/etc/Rprofile.site 
+cp ${GIT_DIR}/Rprofile.site ${PATH_TO_INSTALL}/lib64/R/etc/Rprofile.site 
 chmod 0644 ${PATH_TO_INSTALL}/lib64/R/etc/Rprofile.site 
 
 ############################################################################ 
 ### Etape 4
 ############################################################################ 
 echo "# SENS ############ Installer les librairies R supplementaires"
-${PATH_TO_INSTALL}/bin/Rscript ./installAllLibs.R
+${PATH_TO_INSTALL}/bin/Rscript ${GIT_DIR}/installAllLibs.R
 
 ############################################################################ 
 ### Etape 5
