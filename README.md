@@ -9,9 +9,11 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 <tr>
     <td>Version</td><td>Auteur</td><td>Description</td>
 </tr><tr>
-    <td>1.0</td><td>francis.forget@umontreal.ca</td><td>Installation vanille</td>
+    <td>0.1</td><td>francis.forget@umontreal.ca</td><td>Installation vanille</td>
 </tr><tr>
-    <td>1.1</td><td>francis.forget@umontreal.ca</td><td>Ajouter une action au script "delete|install"</td>
+    <td>0.4</td><td>francis.forget@umontreal.ca</td><td>Ajouter une action au script "delete|install"</td>
+</tr><tr>
+    <td>1.0</td><td>francis.forget@umontreal.ca</td><td>Ajouter les librairies R suypplementaires</td>
 </tr>
 </table>
 
