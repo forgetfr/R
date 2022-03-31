@@ -25,13 +25,11 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 ### Librairies system hdfr5 pour permettre de rouler des librairies R supplementaires
 `hdf5 hdf5-devel`
 
-## REquis
+## Requis
 
 Repertoire d'installation: /usr/local/R/R-**${VERSION}**
 
 Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
-
----
 
 ## Installation
 Les grandes etapes que l'on retrouve dans le script `installation.sh` :
@@ -41,5 +39,5 @@ Les grandes etapes que l'on retrouve dans le script `installation.sh` :
 4. Rouler le script R qui isntalle l'ensemble des librairies exiges et l'executer
 5. Preparer un modulefile pour simplifier l'acces a l'application R
 
-A noter:
+## Notes:
 
