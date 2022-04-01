@@ -12,6 +12,7 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 | 0.9  | francis.forget@umontreal.ca  | Rediriger le stdout et stderr dans un fichier temporaire  |
 | 1.0  | francis.forget@umontreal.ca  | Integration a l'environnement de deploiement  |
 
+
 ## 1. Installation
 
 ### 1.1 Pre-installation (geree par le playbook):
@@ -20,7 +21,7 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 dnf install `git-core gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel java-latest-openjdk`
 
 #### 1.1.2 Deoendances systeme pour permettre d'installer des librairies R supplementaires
-dnf install `hdf5 hdf5-devel cairo-devel libxml2-devel openssl-devel libgit2-devel`
+dnf install `hdf5 hdf5-devel cairo-devel libxml2-devel openssl-devel libgit2-devel libjpeg-turbo-devel`
 
 ### 1.2 Parametres contextuel
 
