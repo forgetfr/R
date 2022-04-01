@@ -31,11 +31,13 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 ### Librairies system hdfr5 pour permettre de rouler des librairies R supplementaires
 `hdf5 hdf5-devel`
 
-## Requis contextuel
+## Parametres contextuel
 
-Environnement de deploiement: Sur le partage NFS en lien aux application.
-
-Repertoire d'installation: /usr/local/R/R-**${VERSION}**
+PATH_TO_INSTALL="${1}/R/R-${VERSION}"   # Repertoire d'installation
+LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
+WORKING_BUILD="${3}"                    # Repertoire de compilation 
+GIT_DIR=`dirname $0`                    # Repertoire courant qui contiendra tous les fichiers de git.
+ACTION="$4"                             # Gestion du cycle de vie de l'application
 
 Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
 
