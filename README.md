@@ -13,15 +13,8 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 | 1.0  | francis.forget@umontreal.ca  | Integration a l'environnement de deploiement  |
 
 
-## Pre-requis a inserer dans le playbook:
-### Dependances systeme pour le playbook
-`git-core`
+### playbook additionnel pour pousser les modulesfiles en lien avec R
 
-### Dependances systeme pour la compilation
-`gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel java-latest-openjdk`
-
-### Librairies system hdfr5 pour permettre de rouler des librairies R supplementaires
-`hdf5 hdf5-devel`
 
 ## Parametres contextuel
 
@@ -35,12 +28,32 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
 
 ## Installation
+
+### Pre-compilation (geree par le playbook):
+
+#### Dependances systeme pour la compilation
+`git-core gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel java-latest-openjdk`
+
+#### Librairies system hdfr5 pour permettre de rouler des librairies R supplementaires
+`hdf5 hdf5-devel`
+
+#### Procedure:
+
 Les grandes etapes que l'on retrouve dans le script `installation.sh` :
 1. Telecharger les sources si necessaire;
 2. Compiler les sources;
 3. Configurer le repo R pour l'acces aux librairies R supplementaires 
 4. Rouler le script R qui isntalle l'ensemble des librairies exiges et l'executer
 5. Preparer un modulefile pour simplifier l'acces a l'application R
+
+### Post-compilation (geree par le playbook):
+
+
+## Supression
+Les grandes etapes que l'on retrouve dans le script `suppression.sh` :
+1. Supprimer les sources;
+2. Supprimer le repertoire de l'application;
+
 
 ## Notes:
 
