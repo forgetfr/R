@@ -33,6 +33,7 @@ dnf install `hdf5 hdf5-devel cairo-devel libxml2-devel openssl-devel libgit2-dev
 | Depot UdeM interne des artefacts  | ${2} | LOCAL_ARTEFACT
 | Repertoire de compilation         | ${3} | WORKING_BUILD
 | Repertoire a journaliser          | ${4} | LOG_DIR
+| Repertoire des modulefiles        | ${5} | MODULEFILES_DIR
 
 
 Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
@@ -57,6 +58,7 @@ Appliquer le playbook pour installer le modulefile R sur l'ensemble des serveurs
 |---|---|---|
 | Repertoire d'installation         | ${1} | PATH_TO_INSTALL
 | Depot UdeM interne des artefacts  | ${2} | LOCAL_ARTEFACT
+| Repertoire des modulefiles        | ${3} | MODULEFILES_DIR
 
 ### 2.2 Procedure:
 

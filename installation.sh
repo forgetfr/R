@@ -13,6 +13,7 @@ LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
 WORKING_BUILD="${3}"                    # Repertoire de compilation
 LOG_DIR="${4}/R-${VERSION}"             # configure make and install logs
 GIT_DIR=`dirname $0`                    # Repertoire courant qui contiendra tous les fichiers de git.
+MODULEFILES_DIR="${5}"                  # Repertoire de la centralisation des modulefiles
 
 mkdir -p $LOG_DIR
 exec &>> "${LOG_DIR}/installation-R.outpout.`date +%Y-%m-%d-%s`"
@@ -68,8 +69,9 @@ ${PATH_TO_INSTALL}/bin/Rscript ${GIT_DIR}/installAllLibs.R
 ############################################################################ 
 # For test purposes: Creation du lien symbolique pour preserver les modules files
 # En production, ceci sera remplace par un modulefile qui ajoute 
-# ${PATH_TO_INSTALL}/bin/ au PATH
 ln -s ${PATH_TO_INSTALL}/bin/* /usr/local/bin/ 
+
+sed "s@WHERETO@${PATH_TO_INSTALL}@g" ${GIT_DIR}/modulefiles/r-4.1.3.alua > $MODULEFILES_DIR
 
 ############################################################################ 
 ### DEBUT: NE PAS MODIFIER CETTE SECTION
