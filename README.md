@@ -27,7 +27,7 @@ dnf install `hdf5 hdf5-devel cairo-devel libxml2-devel openssl-devel libgit2-dev
 
 | Contexte  | Ordre envoyee par le playbook| Nom de la variable dans les scripts  |
 |---|---|---|
-| Repertoire courant qui contiendra tous les fichiers de git  | ${0} |  GIT_DIR
+| Repertoire git contenant les fichiers  | ${0} |  GIT_DIR
 | Repertoire d'installation         | ${1} | PATH_TO_INSTALL
 | Depot UdeM interne des artefacts  | ${2} | LOCAL_ARTEFACT
 | Repertoire de compilation         | ${3} | WORKING_BUILD
