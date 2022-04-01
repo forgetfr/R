@@ -8,13 +8,13 @@ VERSION="4.1.3"
 ############################################################################ 
 
 exec &>> "/tmp/installR.outpout.$$$$"
+mount -o remount,exec /tmp
 umask 0022
 
 PATH_TO_INSTALL="${1}/R/R-${VERSION}"   # Repertoire d'installation
 LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
 WORKING_BUILD="${3}"                    # Repertoire de compilation 
-GIT_DIR=`dirname $0`                # Repertoire courant qui contiendra tous les fichiers de git.
-ACTION="$4"                             # Gestion du cycle de vie de l'application
+GIT_DIR=`dirname $0`                    # Repertoire courant qui contiendra tous les fichiers de git.
 
 [[ -d ${PATH_TO_INSTALL} ]] && { echo "Repertoire d'installation existant" ; exit 1; }
 
@@ -69,5 +69,14 @@ ${PATH_TO_INSTALL}/bin/Rscript ${GIT_DIR}/installAllLibs.R
 #ln -s ${PATH_TO_INSTALL} ${PATH_TO_LINK}
 
 
+
+############################################################################ 
+### DEBUT: NE PAS MODIFIER CETTE SECTION
+############################################################################ 
 # Nettoyer l'environnement de compilation
 rm -rf $WORKINGDIR
+
+mount -o remount,noexec /tmp
+############################################################################ 
+### FIN: NE PAS MODIFIER CETTE SECTION
+############################################################################ 
