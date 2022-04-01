@@ -19,7 +19,7 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 #### 1.1.1 Dependances systeme pour la compilation
 dnf install `git-core gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel java-latest-openjdk`
 
-#### 1.1.2 Librairies system hdfr5 pour permettre de rouler des librairies R supplementaires
+#### 1.1.2 Deoendances systeme pour permettre d'installer des librairies R supplementaires
 dnf install `hdf5 hdf5-devel cairo-devel libxml2-devel openssl-devel libgit2-devel`
 
 ### 1.2 Parametres contextuel
@@ -73,3 +73,5 @@ PACKAGE="NOM_DU_PACKAGE"
 
 if(! (is.element(PACKAGE, installed.packages()[,1])) ) { install.packages(PACKAGE) }
 </code>
+
+Si l'installation necessite une/des librairie/s supplementaire/s, en faire la demande aupres des administrateurs de systeme et de les inscrires dans la presente documentation a la section 1.1.2
