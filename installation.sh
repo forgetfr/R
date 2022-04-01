@@ -8,11 +8,11 @@ VERSION="4.1.3"
 mount -o remount,exec /tmp
 umask 0022
 
-PATH_TO_INSTALL="${1}/R-${VERSION}" # Repertoire d'installation
-LOCAL_ARTEFACT="${2}" # Depot UdeM des sources externes;
-WORKING_BUILD="${3}" # Repertoire de compilation
-LOG_DIR="${4}/R-${VERSION}" # configure make and install logs
-GIT_DIR=`dirname $0` # Repertoire courant qui contiendra tous les fichiers de git.
+PATH_TO_INSTALL="${1}/R-${VERSION}"     # Repertoire d'installation
+LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
+WORKING_BUILD="${3}"                    # Repertoire de compilation
+LOG_DIR="${4}/R-${VERSION}"             # configure make and install logs
+GIT_DIR=`dirname $0`                    # Repertoire courant qui contiendra tous les fichiers de git.
 
 mkdir -p $LOG_DIR
 exec &>> "${LOG_DIR}/installation-R.outpout.`date +%Y-%m-%d-%s`"
