@@ -76,4 +76,4 @@ PACKAGE="NOM_DU_PACKAGE"
 if(! (is.element(PACKAGE, installed.packages()[,1])) ) { install.packages(PACKAGE) }
 </code>
 
-Si l'installation necessite une/des librairie/s supplementaire/s, en faire la demande aupres des administrateurs de systeme et de les inscrires dans la presente documentation a la section 1.1.2
+Si l'installation necessite une/des librairie/s supplementaire/s, en faire la demande aupres des administrateurs de systeme et de les inscrires dans la presente documentation a la [section 1.1.2](#112-deoendances-systeme-pour-permettre-dinstaller-des-librairies-r-supplementaires)
