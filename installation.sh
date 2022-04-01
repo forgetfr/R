@@ -11,7 +11,7 @@ exec &>> "/tmp/installR.outpout.$$$$"
 mount -o remount,exec /tmp
 umask 0022
 
-PATH_TO_INSTALL="${1}/R/R-${VERSION}"   # Repertoire d'installation
+PATH_TO_INSTALL="${1}/R-${VERSION}"     # Repertoire d'installation
 LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
 WORKING_BUILD="${3}"                    # Repertoire de compilation 
 GIT_DIR=`dirname $0`                    # Repertoire courant qui contiendra tous les fichiers de git.
@@ -66,9 +66,7 @@ ${PATH_TO_INSTALL}/bin/Rscript ${GIT_DIR}/installAllLibs.R
 ### Etape 5
 ############################################################################ 
 # Creation du lien symbolique pour preserver les modules files
-#ln -s ${PATH_TO_INSTALL} ${PATH_TO_LINK}
-
-
+ln -s ${PATH_TO_INSTALL}/bin/* /usr/local/bin/ 
 
 ############################################################################ 
 ### DEBUT: NE PAS MODIFIER CETTE SECTION
