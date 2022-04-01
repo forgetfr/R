@@ -45,7 +45,7 @@ cd $WORKING_BUILD/R-${VERSION}
 mkdir -p ${PATH_TO_INSTALL}
 
 echo "# SENS ############ Compiler et installer"
-./configure --prefix=${PATH_TO_INSTALL} 
+./configure --prefix=${PATH_TO_INSTALL} --with-blas --with-lapack --enable-R-shlib
 make 
 make install
 
