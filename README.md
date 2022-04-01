@@ -25,12 +25,13 @@ dnf install `hdf5 hdf5-devel cairo-devel libxml2-devel openssl-devel libgit2-dev
 
 ### 1.2 Parametres contextuels
 
-| Contexte  | Parametres envoyes par le playbook  |
-|---|---|
-| Repertoire d'installation         | PATH_TO_INSTALL="${1}/R/R-${VERSION}"
-| Depot UdeM interne des artefacts  | LOCAL_ARTEFACT="${2}"
-| Repertoire de compilation         | WORKING_BUILD="${3}" 
-| Repertoire courant qui contiendra tous les fichiers de git  |  GIT_DIR=\`dirname $0\`
+| Contexte  | Ordre envoyee par le playbook| Nom de la variable dans les scripts  |
+|---|---|---|
+| Repertoire courant qui contiendra tous les fichiers de git  | ${0} |  GIT_DIR
+| Repertoire d'installation         | ${1} | PATH_TO_INSTALL
+| Depot UdeM interne des artefacts  | ${2} | LOCAL_ARTEFACT
+| Repertoire de compilation         | ${3} | WORKING_BUILD
+
 
 Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
 
@@ -50,10 +51,10 @@ Appliquer le playbook pour installer le modulefile R sur l'ensemble des serveurs
 
 ### 2.1 Parametres contextuel
 
-| Contexte  | Parametres envoyes par le playbook  |
-|---|---|
-| Repertoire d'installation         | PATH_TO_INSTALL="${1}/R/R-${VERSION}"
-| Depot UdeM interne des artefacts  | LOCAL_ARTEFACT="${2}"
+| Contexte  | Ordre envoyee par le playbook| Nom de la variable dans les scripts  |
+|---|---|---|
+| Repertoire d'installation         | ${1} | PATH_TO_INSTALL
+| Depot UdeM interne des artefacts  | ${2} | LOCAL_ARTEFACT
 
 ### 2.2 Procedure:
 
