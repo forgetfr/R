@@ -7,7 +7,7 @@ VERSION="4.1.3"
 ### DEBUT: NE PAS MODIFIER CETTE SECTION
 ############################################################################ 
 
-exec &>> "/tmp/deleteR.outpout.$$$$"
+exec &>> "/tmp/suppression-R.outpout.`date +%Y-%m-%d-%s`"
 mount -o remount,exec /tmp
 umask 0022
 

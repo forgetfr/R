@@ -7,7 +7,7 @@ VERSION="4.1.3"
 ### DEBUT: NE PAS MODIFIER CETTE SECTION
 ############################################################################ 
 
-exec &>> "/tmp/installR.outpout.$$$$"
+exec &>> "/tmp/installation-R.outpout.`date +%Y-%m-%d-%s`"
 mount -o remount,exec /tmp
 umask 0022
 
@@ -53,7 +53,7 @@ make install
 ### Etape 3
 ############################################################################ 
 echo "# SENS ############ Configurer le repo a utiliser par R"
-cp ${GIT_DIR}/Rprofile.site ${PATH_TO_INSTALL}/lib64/R/etc/Rprofile.site 
+cp ${GIT_DIR}/etc/Rprofile.site ${PATH_TO_INSTALL}/lib64/R/etc/Rprofile.site 
 chmod 0644 ${PATH_TO_INSTALL}/lib64/R/etc/Rprofile.site 
 
 ############################################################################ 
