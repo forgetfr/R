@@ -5,21 +5,13 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 
 ## Controle des **versions**:
 
-<table>
-<tr>
-    <td>Version</td><td>Auteur</td><td>Description</td>
-</tr><tr>
-    <td>0.1</td><td>francis.forget@umontreal.ca</td><td>Installation vanille</td>
-</tr><tr>
-    <td>0.2</td><td>francis.forget@umontreal.ca</td><td>Ajouter une action au script "delete|install"</td>
-</tr><tr>
-    <td>0.4</td><td>francis.forget@umontreal.ca</td><td>Ajouter les librairies R supplementaires demandees par le client</td>
-</tr><tr>
-    <td>0.5</td><td>francis.forget@umontreal.ca</td><td>Rediriger le stdout et stderr dans un fichier temporaire</td>
-</tr><tr>
-    <td>1.0</td><td>francis.forget@umontreal.ca</td><td>Integration a l'environnement de deploiement</td>
-</tr>
-</table>
+| Version  | Auteur  | Description  |
+|---|---|---|
+| 0.1  | francis.forget@umontreal.ca  | Installation vanille  |
+| 0.8  | francis.forget@umontreal.ca  | Ajouter les librairies R supplementaires demandees par le client  |
+| 0.9  | francis.forget@umontreal.ca  | Rediriger le stdout et stderr dans un fichier temporaire  |
+| 1.0  | francis.forget@umontreal.ca  | Integration a l'environnement de deploiement  |
+
 
 ## Pre-requis a inserer dans le playbook:
 ### Dependances systeme pour le playbook
@@ -33,16 +25,12 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 
 ## Parametres contextuel
 
-PATH_TO_INSTALL="${1}/R/R-${VERSION}"   # Repertoire d'installation
-
-LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
-
-WORKING_BUILD="${3}"                    # Repertoire de compilation 
-
-GIT_DIR=`dirname $0`                    # Repertoire courant qui contiendra tous les fichiers de git.
-
-ACTION="$4"                             # Gestion du cycle de vie de l'application
-
+| Contexte  | Parametres envoyes par le playbook  |
+|---|---|
+| Repertoire d'installation         | PATH_TO_INSTALL="${1}/R/R-${VERSION}"
+| Depot UdeM interne des artefacts  | LOCAL_ARTEFACT="${2}"
+| Repertoire de compilation         | WORKING_BUILD="${3}" 
+| Repertoire courant qui contiendra tous les fichiers de git  |  GIT_DIR=\`dirname $0\`
 
 Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
 
