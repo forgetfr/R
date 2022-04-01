@@ -20,7 +20,7 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 dnf install `git-core gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel java-latest-openjdk`
 
 #### 1.1.2 Librairies system hdfr5 pour permettre de rouler des librairies R supplementaires
-dnf install `hdf5 hdf5-devel cairo-devel libxml2-devel openssl-devel`
+dnf install `hdf5 hdf5-devel cairo-devel libxml2-devel openssl-devel libgit2-devel`
 
 ### 1.2 Parametres contextuel
 
@@ -39,7 +39,7 @@ Les grandes etapes que l'on retrouve dans le script `installation.sh` :
 1. Telecharger les sources si necessaire;
 2. Compiler les sources;
 3. Configurer le repo R pour l'acces aux librairies R supplementaires 
-4. Rouler le script R qui isntalle l'ensemble des librairies exiges 
+4. Rouler le script R qui isntalle l'ensemble des librairies connues 
 5. Preparer un modulefile pour simplifier l'acces a l'application R
 
 ### 1.4 Post-installation (geree par le playbook):
@@ -64,3 +64,12 @@ Les grandes etapes que l'on retrouve dans le script `suppression.sh` :
 Appliquer le playbook pour retirer le modulefile R sur l'ensemble des serveurs de SENS.
 
 
+## 3. AJout de librairies
+
+En tant que root sur le serveur de compilation, executer dans `R`
+
+<code> 
+PACKAGE="NOM_DU_PACKAGE"
+
+if(! (is.element(PACKAGE, installed.packages()[,1])) ) { install.packages(PACKAGE) }
+</code>
