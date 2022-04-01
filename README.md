@@ -23,7 +23,7 @@ dnf install `git-core gcc-gfortran readline-devel xorg-x11-server-devel libX11-d
 #### 1.1.2 Deoendances systeme pour permettre d'installer des librairies R supplementaires
 dnf install `hdf5 hdf5-devel cairo-devel libxml2-devel openssl-devel libgit2-devel libjpeg-turbo-devel`
 
-### 1.2 Parametres contextuel
+### 1.2 Parametres contextuels
 
 | Contexte  | Parametres envoyes par le playbook  |
 |---|---|
