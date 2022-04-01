@@ -34,10 +34,15 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 ## Parametres contextuel
 
 PATH_TO_INSTALL="${1}/R/R-${VERSION}"   # Repertoire d'installation
+
 LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
+
 WORKING_BUILD="${3}"                    # Repertoire de compilation 
+
 GIT_DIR=`dirname $0`                    # Repertoire courant qui contiendra tous les fichiers de git.
+
 ACTION="$4"                             # Gestion du cycle de vie de l'application
+
 
 Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
 
