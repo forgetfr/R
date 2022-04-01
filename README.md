@@ -32,6 +32,7 @@ dnf install `hdf5 hdf5-devel cairo-devel libxml2-devel openssl-devel libgit2-dev
 | Repertoire d'installation         | ${1} | PATH_TO_INSTALL
 | Depot UdeM interne des artefacts  | ${2} | LOCAL_ARTEFACT
 | Repertoire de compilation         | ${3} | WORKING_BUILD
+| Repertoire a journaliser          | ${4} | LOG_DIR
 
 
 Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
