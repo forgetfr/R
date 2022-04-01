@@ -65,7 +65,9 @@ ${PATH_TO_INSTALL}/bin/Rscript ${GIT_DIR}/installAllLibs.R
 ############################################################################ 
 ### Etape 5
 ############################################################################ 
-# Creation du lien symbolique pour preserver les modules files
+# For test purposes: Creation du lien symbolique pour preserver les modules files
+# En production, ceci sera remplace par un modulefile qui ajoute 
+# ${PATH_TO_INSTALL}/bin/ au PATH
 ln -s ${PATH_TO_INSTALL}/bin/* /usr/local/bin/ 
 
 ############################################################################ 
