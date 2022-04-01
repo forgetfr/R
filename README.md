@@ -17,7 +17,7 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 ### Pre-installation (geree par le playbook):
 
 #### Dependances systeme pour la compilation
-`git-core gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel java-latest-openjdk openssl-devel`
+`git-core gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel java-latest-openjdk openssl-devel cairo-devel`
 
 #### Librairies system hdfr5 pour permettre de rouler des librairies R supplementaires
 `hdf5 hdf5-devel`
