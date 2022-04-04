@@ -47,6 +47,8 @@ Les grandes etapes que l'on retrouve dans le script `install` :
 4. Rouler le script R qui isntalle l'ensemble des librairies connues 
 5. Preparer un modulefile pour simplifier l'acces a l'application R
 
+N.B. Le package SAMR (derniere mise a jour en 2018) demande n'est plus compatible avec la version de R > 4.1
+
 ### 1.4 Post-installation (geree par le playbook):
 Appliquer le playbook pour installer le modulefile R sur l'ensemble des serveurs de SENS.
 
