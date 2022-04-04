@@ -71,7 +71,7 @@ ${PATH_TO_INSTALL}/bin/Rscript ${GIT_DIR}/installAllLibs.R
 # En production, ceci sera remplace par un modulefile qui ajoute 
 ln -s ${PATH_TO_INSTALL}/bin/* /usr/local/bin/ 
 
-sed "s@WHERETO@${PATH_TO_INSTALL}@g" ${GIT_DIR}/modulefiles/r-4.1.3.alua > $MODULEFILES_DIR
+sed "s@WHERETO@${PATH_TO_INSTALL}@g" ${GIT_DIR}/modulefiles/r-4.1.3.lua > $MODULEFILES_DIR/r-4.1.3.lua
 
 ############################################################################ 
 ### DEBUT: NE PAS MODIFIER CETTE SECTION
