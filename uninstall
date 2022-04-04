@@ -10,7 +10,6 @@ VERSION="4.1.3"
 PATH_TO_INSTALL="${1}/R-${VERSION}"     # Repertoire d'installation
 LOG_DIR="${2}/R-${VERSION}"             # configure make and install logs
 MODULEFILES_DIR="${3}" 
-#LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
 
 mkdir -p $LOG_DIR
 exec &>> "${LOG_DIR}/`date +%Y-%m-%d-%H-%M-%S`-uninstall"
@@ -19,20 +18,14 @@ exec &>> "${LOG_DIR}/`date +%Y-%m-%d-%H-%M-%S`-uninstall"
 ### FIN: NE PAS MODIFIER CETTE SECTION
 ############################################################################ 
 
-
-#[[ -e "${LOCAL_ARTEFACT}/R-${VERSION}.tar.gz" ]] && {
-#    echo "# SENS ############ Supression de l'artefact ${LOCAL_ARTEFACT}/R-${VERSION}.tar.gz";
-#    rm "${LOCAL_ARTEFACT}/R-${VERSION}.tar.gz";
-#}
-
 [[ -e "${PATH_TO_INSTALL}" ]] && {
     echo "# SENS ############ Supression de l'application ${PATH_TO_INSTALL}";
-    rm -rf ${PATH_TO_INSTALL};
+    time rm -rvf ${PATH_TO_INSTALL};
 }
 
 [[ -e "${MODULEFILES_DIR}/r-4.1.3.lua" ]] && {
     echo "# SENS ############ Supression du modulefiles ${MODULEFILES_DIR}/r-4.1.3.lua";
-    rm ${MODULEFILES_DIR}/r-4.1.3.lua;
+    time rm -v ${MODULEFILES_DIR}/r-4.1.3.lua;
 }
 
 ############################################################################ 
