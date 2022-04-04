@@ -16,7 +16,7 @@ GIT_DIR=`dirname $0`                    # Repertoire courant qui contiendra tous
 MODULEFILES_DIR="${5}"                  # Repertoire de la centralisation des modulefiles
 
 mkdir -p $LOG_DIR
-exec &>> "${LOG_DIR}/`date +%Y-%m-%d-%H-%M-%S`-install.outpout"
+exec &>> "${LOG_DIR}/`date +%Y-%m-%d-%H-%M-%S`-install"
 
 [[ -d ${PATH_TO_INSTALL} ]] && { echo "Repertoire d'installation existant" ; exit 1; }
 

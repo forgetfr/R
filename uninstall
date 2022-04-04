@@ -13,7 +13,7 @@ MODULEFILES_DIR="${3}"
 #LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
 
 mkdir -p $LOG_DIR
-exec &>> "${LOG_DIR}/`date +%Y-%m-%d-%H-%M-%S`-uninstall.outpout"
+exec &>> "${LOG_DIR}/`date +%Y-%m-%d-%H-%M-%S`-uninstall"
 
 ############################################################################ 
 ### FIN: NE PAS MODIFIER CETTE SECTION
