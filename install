@@ -76,6 +76,8 @@ sed "s@WHERETO@${PATH_TO_INSTALL}@g" ${GIT_DIR}/modulefiles/r-4.1.3.lua > $MODUL
 rm -rf $WORKINGDIR
 
 mount -o remount,noexec /tmp
+
+exit 0;
 ############################################################################ 
 ### FIN: NE PAS MODIFIER CETTE SECTION
 ############################################################################ 
