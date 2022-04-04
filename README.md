@@ -40,7 +40,7 @@ Utiliser le repo CRAN: <https://cran.utstat.utoronto.ca/>
 
 ### 1.3 Procedure:
 
-Les grandes etapes que l'on retrouve dans le script `installation.sh` :
+Les grandes etapes que l'on retrouve dans le script `install` :
 1. Telecharger les sources si necessaire;
 2. Compiler les sources;
 3. Configurer le repo R pour l'acces aux librairies R supplementaires 
@@ -62,7 +62,7 @@ Appliquer le playbook pour installer le modulefile R sur l'ensemble des serveurs
 
 ### 2.2 Procedure:
 
-Les grandes etapes que l'on retrouve dans le script `suppression.sh` :
+Les grandes etapes que l'on retrouve dans le script `uninstall` :
 1. Supprimer les sources;
 2. Supprimer le repertoire de l'application;
 
