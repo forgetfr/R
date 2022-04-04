@@ -8,10 +8,12 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 | Version  | Auteur  | Description  |
 |---|---|---|
 | 0.1  | francis.forget@umontreal.ca  | Installation vanille  |
-| 0.8  | francis.forget@umontreal.ca  | Ajouter les librairies R supplementaires demandees par le client  |
-| 0.9  | francis.forget@umontreal.ca  | Rediriger le stdout et stderr dans un fichier temporaire  |
-| 1.0  | francis.forget@umontreal.ca  | Integration a l'environnement de deploiement  |
+| 0.7  | francis.forget@umontreal.ca  | Ajouter les librairies R supplementaires demandees par le client  |
+| 0.8  | francis.forget@umontreal.ca  | Rediriger le stdout et stderr dans un fichier temporaire  |
+| 0.9  | francis.forget@umontreal.ca  | Integration a l'environnement de deploiement  |
+| 1.0  | francis.forget@umontreal.ca  | MEP :-S ok ok ok mettons qu'il y a eu des tests d'acceptation du client  |
 | 1.1  | francis.forget@umontreal.ca  | Structurer le README  |
+| 1.2  | francis.forget@umontreal.ca  | Validation d'erreurs  |
 
 
 ## 1. Installation
