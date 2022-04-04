@@ -67,7 +67,7 @@ ${PATH_TO_INSTALL}/bin/Rscript ${GIT_DIR}/installAllLibs.R
 ############################################################################ 
 ### Etape 5
 ############################################################################ 
-sed "s@WHERETO@${PATH_TO_INSTALL}@g" ${GIT_DIR}/modulefiles/r-4.1.3.lua > $MODULEFILES_DIR/r-4.1.3.lua
+sed "s@WHERETO@${PATH_TO_INSTALL}@g" ${GIT_DIR}/modulefiles/r-4.1.3.lua > $MODULEFILES_DIR/R-4.1.3.lua
 
 ############################################################################ 
 ### DEBUT: NE PAS MODIFIER CETTE SECTION
