@@ -11,7 +11,8 @@ exec &>> "/tmp/suppression-R.outpout.`date +%Y-%m-%d-%s`"
 umask 0022
 
 PATH_TO_INSTALL="${1}/R-${VERSION}"     # Repertoire d'installation
-LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
+MODULEFILES_DIR="${2}" 
+#LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
 
 ############################################################################ 
 ### FIN: NE PAS MODIFIER CETTE SECTION
@@ -28,6 +29,10 @@ LOCAL_ARTEFACT="${2}"                   # Depot UdeM des sources externes;
     rm -rf ${PATH_TO_INSTALL}/R-${VERSION};
 }
 
+[[ -e "${MODULEFILES_DIR}/r-4.1.3.lua" ]] && {
+    echo "# SENS ############ Supression du modulefiles ${MODULEFILES_DIR}/r-4.1.3.lua";
+    rm ${MODULEFILES_DIR}/r-4.1.3.lua;
+}
 
 ############################################################################ 
 ### DEBUT: NE PAS MODIFIER CETTE SECTION
