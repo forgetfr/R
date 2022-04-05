@@ -35,6 +35,7 @@ cd $LOCAL_ARTEFACT
 }
 
 echo "# SENS ############ Decompresser les artefacts"
+[[ -d "$WORKING_BUILD/R-${VERSION}" ]] && rm -rf WORKING_BUILD/R-${VERSION};
 tar -zxf R-${VERSION}.tar.gz --directory $WORKING_BUILD
 
 ############################################################################ 
