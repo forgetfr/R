@@ -15,10 +15,14 @@ LOG_DIR="${4}/R-${VERSION}"             # configure make and install logs
 GIT_DIR=`dirname $0`                    # Repertoire courant qui contiendra tous les fichiers de git.
 MODULEFILES_DIR="${5}"                  # Repertoire de la centralisation des modulefiles
 
+[[ -d ${PATH_TO_INSTALL} ]] && { echo "Repertoire d'installation existant" ; exit 1; }
+[[ ! -d ${LOCAL_ARTEFACT} ]] && { echo "Repertoire d'artefacts non-existant" ; exit 2; }
+[[ ! -d ${WORKING_BUILD} ]] && { echo "Repertoire de compilation non-existant" ; exit 3; }
+[[ ! -d ${$4} ]] && { echo "Repertoire de journalisation non-existant" ; exit 4; }
+[[ ! -d ${MODULEFILES_DIR} ]] && { echo "Repertoire des modulefiles non-existant" ; exit 5; }
+
 mkdir -p $LOG_DIR
 exec &>> "${LOG_DIR}/`date +%Y-%m-%d-%H-%M-%S`-install"
-
-[[ -d ${PATH_TO_INSTALL} ]] && { echo "Repertoire d'installation existant" ; exit 1; }
 
 ############################################################################ 
 ### FIN: NE PAS MODIFIER CETTE SECTION
