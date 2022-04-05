@@ -24,7 +24,7 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 #### 1.1.1 Dependances systeme pour la compilation
 dnf install `git-core gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel java-latest-openjdk java-latest-openjdk-devel`
 
-#### 1.1.2 Deoendances systeme pour permettre d'installer des librairies R supplementaires
+#### 1.1.2 Dependances systeme pour permettre d'installer des librairies R supplementaires
 dnf install `hdf5 hdf5-devel cairo-devel libxml2-devel openssl-devel libgit2-devel libjpeg-turbo-devel cmake`
 
 ### 1.2 Parametres contextuels
