@@ -7,10 +7,11 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 
 | Version  | Auteur  | Description  |
 |---|---|---|
-| 0.1  | francis.forget@umontreal.ca  | Installation vanille  |
-| 0.7  | francis.forget@umontreal.ca  | Ajouter les librairies R supplementaires demandees par le client  |
-| 0.8  | francis.forget@umontreal.ca  | Rediriger le stdout et stderr dans un fichier temporaire  |
-| 0.9  | francis.forget@umontreal.ca  | Integration a l'environnement de deploiement  |
+| 0.1  | francis.forget@umontreal.ca  | MVP |
+| 0.2  | francis.forget@umontreal.ca  | Rediriger le stdout et stderr dans un fichier temporaire  
+| 0.6  | francis.forget@umontreal.ca  | Ajouter les librairies R supplementaires demandees par le client  |
+| 0.8  | francis.forget@umontreal.ca  | Integration a l'environnement de deploiement  |
+| 0.9  | francis.forget@umontreal.ca  | Resultats tests d'acceptation  |
 | 1.0  | francis.forget@umontreal.ca  | MEP :-S ok ok ok mettons qu'il y a eu des tests d'acceptation du client  |
 | 1.1  | francis.forget@umontreal.ca  | Structurer le README  |
 | 1.2  | francis.forget@umontreal.ca  | Validation d'erreurs  |
@@ -47,12 +48,10 @@ Les grandes etapes que l'on retrouve dans le script `install` :
 2. Compiler les sources;
 3. Configurer le repo R pour l'acces aux librairies R supplementaires 
 4. Rouler le script R qui isntalle l'ensemble des librairies connues 
-5. Preparer un modulefile pour simplifier l'acces a l'application R
+5. Deployer le modulefile pour simplifier l'acces a l'application R
 
 N.B. Le package SAMR (derniere mise a jour en 2018) demande n'est plus compatible avec la version de R > 4.1
 
-### 1.4 Post-installation (geree par le playbook):
-Appliquer le playbook pour installer le modulefile R sur l'ensemble des serveurs de SENS.
 
 ## 2. Supression
 
@@ -61,17 +60,13 @@ Appliquer le playbook pour installer le modulefile R sur l'ensemble des serveurs
 | Contexte  | Ordre envoyee par le playbook| Nom de la variable dans les scripts  |
 |---|---|---|
 | Repertoire d'installation         | ${1} | PATH_TO_INSTALL
-| Depot UdeM interne des artefacts  | ${2} | LOCAL_ARTEFACT
-| Repertoire des modulefiles        | ${3} | MODULEFILES_DIR
+| Repertoire des modulefiles        | ${2} | MODULEFILES_DIR
 
 ### 2.2 Procedure:
 
 Les grandes etapes que l'on retrouve dans le script `uninstall` :
-1. Supprimer les sources;
-2. Supprimer le repertoire de l'application;
-
-### 2.3 Post-suppression (geree par le playbook):
-Appliquer le playbook pour retirer le modulefile R sur l'ensemble des serveurs de SENS.
+1. Supprimer le repertoire de l'application;
+2. Supprimer le modulefiles
 
 
 ## 3. AJout de librairies
