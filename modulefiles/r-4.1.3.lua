@@ -1,7 +1,7 @@
 local name = "R"
 local version = "4.1.3"
 
-local root = "WHERETO/R-4.1.3"
+local root = "WHERETO"
 
 if (mode() == "load") then
 
