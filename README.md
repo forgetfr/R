@@ -1,4 +1,6 @@
 
+#!/bin/bash
+
 # R version 4.1.3
 
 Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
