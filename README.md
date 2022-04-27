@@ -17,7 +17,7 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 | 1.2  | francis.forget@umontreal.ca  | Validation d'erreurs  |
 
 
-## 1. Installation allo
+## 1. Installation
 
 ### 1.1 Pre-installation (geree par le playbook):
 
