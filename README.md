@@ -16,6 +16,13 @@ Site officiel de l'application: [CRAN-R](https://cran.r-project.org/).
 | 1.1  | francis.forget@umontreal.ca  | Structurer le README  |
 | 1.2  | francis.forget@umontreal.ca  | Validation d'erreurs  |
 
+## 0. Mentalite de compilation
+R est un logiciel pouvant supporter une panoplie de librairies provenant de la communaute Open-Source entreposees sur CRAN-R.org.
+
+Il faut installer R et par la suite, a l'interieur de l'application, il faut invoquer une commande R pour installer une librairie.
+<code>
+install.packages(nom_de_la_librairie)
+</code>
 
 ## 1. Installation
 
