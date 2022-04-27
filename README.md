@@ -24,6 +24,8 @@ Il faut installer R et par la suite, a l'interieur de l'application, il faut inv
 install.packages(nom_de_la_librairie)
 </code>
 
+Etapes: telechargement des sources --> installation des packgages systemes --> modification du code des sources --> compilation --> installation --> configuration finale.
+
 ## 1. Installation
 
 ### 1.1 Pre-installation (geree par le playbook):
