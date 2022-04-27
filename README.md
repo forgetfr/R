@@ -31,7 +31,7 @@ Etapes: telechargement des sources --> installation des packgages systemes --> m
 ### 1.1 Pre-installation (geree par le playbook):
 
 #### 1.1.1 Dependances systeme pour la compilation du core R
-dnf install `git-core gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel java-latest-openjdk java-latest-openjdk-devel`
+dnf install `git-core gcc-gfortran readline-devel xorg-x11-server-devel libX11-devel libXt-devel xz-devel pcre2-devel libcurl-devel java-latest-openjdk java-latest-openjdk-devel toto`
 
 #### 1.1.2 Dependances systeme pour permettre l'installation des librairies R supplementaires
 dnf install `hdf5 hdf5-devel cairo-devel libxml2-devel openssl-devel libgit2-devel libjpeg-turbo-devel cmake`
